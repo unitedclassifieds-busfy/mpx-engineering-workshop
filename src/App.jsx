@@ -201,7 +201,7 @@ function Inspector({ candidate, candidates, selectedCandidateId, onCandidateChan
       {selectedJob && <div className="inspector-card match-inspector">
         <div className="inspector-card-kicker">SELECTED ROLE</div>
         <div className="selected-role-title"><strong>{selectedJob.title}</strong><span>{selectedJob.company}</span></div>
-        <div className="large-score-row"><ScoreRing score={selectedJob.match.score} /><div><strong>{selectedJob.match.matchedCount} of {selectedJob.match.requiredCount}</strong><span>skills matched exactly</span></div></div>
+        <div className="large-score-row"><ScoreRing score={selectedJob.match.score} /><div><strong>{selectedJob.match.matchedCount} of {selectedJob.match.requiredCount}</strong><span>skills matched (exact or related)</span></div></div>
         <div className="inspector-divider" />
         <div className="breakdown-title">Why this match?</div>
         <div className="skill-breakdown">{selectedJob.match.skillBreakdown.map((item) => (
